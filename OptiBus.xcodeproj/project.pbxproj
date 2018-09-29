@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150D4F633A0575A8C7DD40BF /* Pods_OptiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E3AA4ABCF529F02C974F6D /* Pods_OptiBus.framework */; };
 		88E3596D215DD5BC00E58932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E3596C215DD5BC00E58932 /* AppDelegate.swift */; };
 		88E3596F215DD5BD00E58932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E3596E215DD5BD00E58932 /* ViewController.swift */; };
 		88E35972215DD5BD00E58932 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E35970215DD5BD00E58932 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75E3AA4ABCF529F02C974F6D /* Pods_OptiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E35969215DD5BC00E58932 /* OptiBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptiBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E3596C215DD5BC00E58932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E3596E215DD5BD00E58932 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		88E35976215DD5BD00E58932 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88E35979215DD5BD00E58932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88E3597B215DD5BD00E58932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B10DE16BD539623BAE82B49 /* Pods-OptiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OptiBus/Pods-OptiBus.debug.xcconfig"; sourceTree = "<group>"; };
+		CE53413F176573C8C5A5F11D /* Pods-OptiBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-OptiBus/Pods-OptiBus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150D4F633A0575A8C7DD40BF /* Pods_OptiBus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		178C81270A2B89046E6739F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B10DE16BD539623BAE82B49 /* Pods-OptiBus.debug.xcconfig */,
+				CE53413F176573C8C5A5F11D /* Pods-OptiBus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4ACFEFAF31452FD0C24B5F94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75E3AA4ABCF529F02C974F6D /* Pods_OptiBus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		88E35960215DD5BC00E58932 = {
 			isa = PBXGroup;
 			children = (
 				88E3596B215DD5BC00E58932 /* OptiBus */,
 				88E3596A215DD5BC00E58932 /* Products */,
+				178C81270A2B89046E6739F3 /* Pods */,
+				4ACFEFAF31452FD0C24B5F94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88E3597E215DD5BD00E58932 /* Build configuration list for PBXNativeTarget "OptiBus" */;
 			buildPhases = (
+				CE2C8F07313CC7822519E643 /* [CP] Check Pods Manifest.lock */,
 				88E35965215DD5BC00E58932 /* Sources */,
 				88E35966215DD5BC00E58932 /* Frameworks */,
 				88E35967215DD5BC00E58932 /* Resources */,
+				812BED30FC543834A9A7EB6B /* [CP] Copy Pods Resources */,
+				7CA92BF5536FAA4159EB4ADD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CA92BF5536FAA4159EB4ADD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OptiBus/Pods-OptiBus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OptiBus/Pods-OptiBus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		812BED30FC543834A9A7EB6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OptiBus/Pods-OptiBus-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OptiBus/Pods-OptiBus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE2C8F07313CC7822519E643 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OptiBus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88E35965215DD5BC00E58932 /* Sources */ = {
@@ -282,6 +372,7 @@
 		};
 		88E3597F215DD5BD00E58932 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B10DE16BD539623BAE82B49 /* Pods-OptiBus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +391,7 @@
 		};
 		88E35980215DD5BD00E58932 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE53413F176573C8C5A5F11D /* Pods-OptiBus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

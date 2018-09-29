@@ -1,0 +1,6 @@
+framework module Pods_OptiBus {
+  umbrella header "Pods-OptiBus-umbrella.h"
+
+  export *
+  module * { export * }
+}
